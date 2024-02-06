@@ -11,3 +11,78 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.importContainer {
+  position: relative;
+  border-width: 2px;
+  border-color: #fecaca;
+  background-color: #fee2e2;
+  width: 600px;
+  height: 600px;
+  flex: auto;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.previewContainer {
+  border-width: 2px;
+  border-color: #93c5fd;
+  background-color: #bfdbfe;
+}
+
+.preview {
+  flex: auto;
+  margin-left: 1rem;
+  overflow-x: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.imageContainer {
+  flex-shrink: 0;
+}
+
+.image {
+  width: 8rem;
+  height: 8rem;
+}
+
+.dragContainer {
+  padding: 1rem;
+  background-color: #e5e7eb;
+}
+
+.drag {
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1d5db;
+  width: 200px;
+  height: 100px;
+  border-radius: 0.375rem;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: #6b7280;
+}
+
+/* 画像にホバー時、カーソルを変更し、拡大可能であることを明示する */
+.image-box {
+  cursor: zoom-in;
+  display: inline-block;
+}
+
+/* ダイアローグ内をクリックしても閉じないようにしたい場合は必要 */
+.image-dialog {
+  padding: 0;
+}
+
+/* ダイアローグの背景部分をデコりたい場合は必要、今回はカーソルを変更し縮小可能であることを明示する */
+.image-dialog::backdrop {
+  cursor: zoom-out;
+}
+
+/* ダイアローグ内の画像の大きさを指定する */
+.contents img {
+  width: 90vw;
+  mix-blend-mode: difference;
+}
