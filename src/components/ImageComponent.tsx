@@ -86,44 +86,45 @@ export const ImageComponent = () => {
   };
 
   return (
-    <div className="importContainer">
-      <input
-        type="file"
-        multiple // 画像を複数選択できるようにする
-        accept="image/jpeg, image/png"
-        onChange={handleInputFile}
-        ref={inputRef}
-      />
-      <div className="dragContainer">
-        <div
-          onDrop={handleDrop}
-          onDragOver={handleDragOver}
-          onDragLeave={handleDragLeave}
-          className={`drag ${
-            dragOver
-              ? { backgroundColor: 'white' }
-              : { backgroundColor: '#cbd5e1' }
-          }`}>
-          ドラッグ&ドロップ
+    <>
+      <div className="importContainer">
+        <input
+          type="file"
+          multiple // 画像を複数選択できるようにする
+          accept="image/jpeg, image/png"
+          onChange={handleInputFile}
+          ref={inputRef}
+        />
+        <div className="dragContainer">
+          <div
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            className={`drag ${dragOver
+                ? { backgroundColor: 'white' }
+                : { backgroundColor: '#cbd5e1' }
+              }`}>
+            ドラッグ&ドロップ
+          </div>
         </div>
-      </div>
-      <div className="previewContainer">
-        <p>画像プレビュー</p>
-        <div className="preview">
-          {base64Images.length !== 0 &&
-            base64Images.map((image, idx) => (
-              <div>
-                <div key={idx} className="imageContainer">
-                  <img
-                    src={image}
-                    className="image"
-                    onClick={() => handleImageClick}
-                  />
+        <div className="previewContainer">
+          <p>画像プレビュー</p>
+          <div className="preview">
+            {base64Images.length !== 0 &&
+              base64Images.map((image, idx) => (
+                <div>
+                  <div key={idx} className="imageContainer">
+                    <img
+                      src={image}
+                      className="image"
+                      onClick={() => handleImageClick}
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
