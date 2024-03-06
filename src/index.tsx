@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { ImageComponent } from './components/ImageComponent';
-import ModalComponent from './components/ModalComponent';
+import { ImageDialog } from './components/ImageDialog';
+// import '../public/image/flutter.png'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ImageComponent />
-    <ModalComponent />
+    <ImageDialog src={'public/image/flutter.png'} />
   </React.StrictMode>
 );
 
