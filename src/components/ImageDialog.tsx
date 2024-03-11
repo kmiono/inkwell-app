@@ -50,4 +50,5 @@ export const ImageDialog = ({
 }
 
 // todo クリックして拡大表示機能はたぶん実装
+// 画像表示行けたがサイズ調整できてない
 // reference https://zenn.dev/ryota0222/articles/d574bae11306b0

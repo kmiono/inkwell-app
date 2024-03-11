@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { ImageComponent } from './components/ImageComponent';
 import { ImageDialog } from './components/ImageDialog';
-// import '../public/image/flutter.png'
+import pic from './image/flutter.png';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ImageComponent />
-    <ImageDialog src={'public/image/flutter.png'} />
+    <ImageDialog src={pic} />
   </React.StrictMode>
 );
 
