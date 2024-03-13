@@ -82,7 +82,12 @@ code {
 }
 
 /* ダイアローグ内の画像の大きさを指定する */
+.contents {
+  width: 100%;
+}
+
 .contents img {
-  width: 90vw;
+  width: 100%;
   mix-blend-mode: difference;
+  height: auto;
 }

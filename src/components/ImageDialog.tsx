@@ -1,3 +1,5 @@
+import '../App.css'
+
 import React, { useCallback, useRef } from 'react';
 
 interface Props {
